@@ -31,6 +31,6 @@ async def read_item(skip: int = 0, limit: int = 10):
     return fake_items_db[skip: skip + limit]
 
 
-@app.post("/items/")
+@app.post("/create_item/")
 async def create_item(item: Item):
     return item
