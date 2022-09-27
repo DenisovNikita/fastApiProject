@@ -1,11 +1,10 @@
 # pylint: disable=no-name-in-module
 # pylint: disable=no-self-argument
 
-from typing import Union
-
 from fastapi import FastAPI
 
-from entities import Item
+from entities import Item, Honey
+from database import DataBase
 
 app = FastAPI()
 
@@ -31,3 +30,13 @@ async def read_item(skip: int = 0, limit: int = 10):
 @app.post("/create_item/")
 async def create_item(item: Item):
     return item
+
+
+database = DataBase()
+
+@app.post("/shop/")
+async def shop(honey: Honey):
+    if database.find(honey):
+        database.sell(honey)
+        return True
+    return False

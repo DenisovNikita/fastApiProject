@@ -8,3 +8,8 @@ class Item(BaseModel):
     description: Union[str, None] = None
     price: float
     tax: Union[float, None] = None
+
+
+class Honey(BaseModel):
+    quantity_kg: float
+    type: str
