@@ -1,0 +1,30 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/get_items/?skip=1&limit=1
+Accept: application/json
+
+###
+
+
+POST http://127.0.0.1:8000/create_item/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "table",
+  "description": "wooden table for dinner",
+  "price": 5,
+  "tax": 1
+}
+
+###
