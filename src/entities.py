@@ -1,3 +1,9 @@
+"""
+
+File with contracts
+
+"""
+
 from typing import Union
 
 from pydantic import BaseModel
