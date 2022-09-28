@@ -1,3 +1,2 @@
 [MASTER]
 extension-pkg-whitelist=pydantic
-disable=C0115, # missing-module-docstring

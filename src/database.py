@@ -8,6 +8,12 @@ from entities import Honey
 
 
 class DataBase:
+    """
+
+    Mock DataBase which storage info about goods in the shop
+
+    """
+
     def __init__(self):
         pass
 
