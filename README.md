@@ -3,3 +3,7 @@
 Technologies:
 - FastAPI
 - PyTest
+
+### Project architecture
+
+![](resources/images/architecture.jpg)
