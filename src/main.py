@@ -3,8 +3,8 @@
 
 from fastapi import FastAPI
 
-from entities import Item, Honey
 from database import DataBase
+from entities import Honey, Item
 
 app = FastAPI()
 
