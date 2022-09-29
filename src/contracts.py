@@ -31,3 +31,13 @@ class Good(BaseModel):
 
     quantity: float
     type: str
+
+
+class User(BaseModel):
+    """
+
+    User data
+
+    """
+
+    id: str

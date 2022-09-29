@@ -3,8 +3,7 @@
 Service which connected to database
 
 """
-
-from contracts import Good
+from contracts import Good  # pylint: disable=cyclic-import
 
 
 class DataBase:

@@ -6,10 +6,9 @@ Web application for honey selling
 
 from fastapi import FastAPI
 
-from contracts import Good, Item
+from contracts import Good, Item, User
 from database import DataBase
 from shopping_cart import ShoppingCart
-from user import User
 
 app = FastAPI()
 
