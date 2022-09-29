@@ -22,12 +22,12 @@ class Item(BaseModel):
     tax: Union[float, None] = None
 
 
-class Honey(BaseModel):
+class Good(BaseModel):
     """
 
-    Type of honey which is available in the shop
+    Type of good which is available in the shop
 
     """
 
-    quantity_kg: float
+    quantity: float
     type: str

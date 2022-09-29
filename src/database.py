@@ -4,7 +4,7 @@ Service which connected to database
 
 """
 
-from entities import Honey
+from contracts import Good
 
 
 class DataBase:
@@ -17,22 +17,56 @@ class DataBase:
     def __init__(self):
         pass
 
-    def find(self, honey: Honey):
+    def find(self, good: Good):
         """
 
         Args:
-            honey: type of goods which you want to find
+            good: good which you want to find
 
         Returns: is there any matched goods
 
         """
 
-    def sell(self, honey: Honey):
+    def add(self, good: Good):
         """
 
         Args:
-            honey: type of goods which you want to sell
+            good: good which you want to add to database
 
-        Returns: is selling successful
+        Returns: is adding successful
+
+        """
+
+    def show_goods(self):
+        """
+
+        Returns: available goods in the shop
+
+        """
+
+    def get_user_data(self, user_id: str):
+        """
+
+        Returns: user data
+
+        """
+
+    def decrease(self, good: Good):
+        """
+
+        Args:
+            good: good which you want to remove from database
+
+        Returns: is removing was successful
+
+        """
+
+    def increase(self, good: Good):
+        """
+
+        Args:
+            good: good which you want to add to database
+
+        Returns: is adding was successful
 
         """

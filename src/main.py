@@ -6,8 +6,10 @@ Web application for honey selling
 
 from fastapi import FastAPI
 
+from contracts import Good, Item
 from database import DataBase
-from entities import Honey, Item
+from shopping_cart import ShoppingCart
+from user import User
 
 app = FastAPI()
 
@@ -66,19 +68,83 @@ async def create_item(item: Item):
 
 
 database = DataBase()
+shopping_cart = ShoppingCart()
 
 
-@app.post("/shop/")
-async def shop(honey: Honey):
+@app.get("/show_goods/")
+async def show_goods():
+    """
+
+    Returns: shop window of goods
+
+    """
+    return database.show_goods()
+
+
+@app.post("/register_user/")
+async def register_user(user: User):
     """
 
     Args:
-        honey: type of goods which you want to shop
+        user: user data
 
-    Returns: Is shopping was successful
+    Returns: created user
 
     """
-    if database.find(honey):
-        database.sell(honey)
+    return database.add(user)
+
+
+@app.get("/get_user_data/{id}")
+async def get_user_data(user_id: str):
+    """
+
+    Args:
+        user_id: user id
+
+    Returns: user data
+
+    """
+    return database.get_user_data(user_id)
+
+
+@app.post("/add_to_cart/")
+async def add_to_cart(good: Good):
+    """
+
+    Args:
+        good: type of goods which you want to add
+
+    Returns: Is adding was successful
+
+    """
+    if database.find(good):
+        database.decrease(good)
+        shopping_cart.add(good)
         return True
     return False
+
+
+@app.post("/remove_from_cart/")
+async def remove_from_cart(good: Good):
+    """
+
+    Args:
+        good: type of goods which you want to remove
+
+    Returns: Is removing was successful
+
+    """
+
+    shopping_cart.remove(good)
+    database.increase(good)
+    return True
+
+
+@app.post("/release_cart")
+async def release_cart():
+    """
+
+    Returns: None
+
+    """
+    shopping_cart.release()
