@@ -7,3 +7,7 @@ Technologies:
 ### Project architecture
 
 ![](resources/images/architecture.jpg)
+
+### Tests
+
+run `python -m pytest` in the root of project
