@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\"\x06\n\x04Null\"A\n\x06Ticket\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x14\n\x0cstory_points\x18\x03 \x01(\r\")\n\x0c\x43onfirmation\x12\x19\n\x11\x65xpected_dateline\x18\x01 \x01(\t2J\n\x0bTestService\x12\x16\n\x06Health\x12\x05.Null\x1a\x05.Null\x12#\n\tAddTicket\x12\x07.Ticket\x1a\r.Confirmationb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\"\x06\n\x04Null\"9\n\x05Honey\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\r\"\x1c\n\x0c\x43onfirmation\x12\x0c\n\x04\x64\x61te\x18\x01 \x01(\t2H\n\x0bTestService\x12\x16\n\x06Health\x12\x05.Null\x1a\x05.Null\x12!\n\x08\x41\x64\x64Honey\x12\x06.Honey\x1a\r.Confirmationb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'service_pb2', globals())
@@ -22,10 +22,10 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   _NULL._serialized_start=17
   _NULL._serialized_end=23
-  _TICKET._serialized_start=25
-  _TICKET._serialized_end=90
-  _CONFIRMATION._serialized_start=92
-  _CONFIRMATION._serialized_end=133
-  _TESTSERVICE._serialized_start=135
-  _TESTSERVICE._serialized_end=209
+  _HONEY._serialized_start=25
+  _HONEY._serialized_end=82
+  _CONFIRMATION._serialized_start=84
+  _CONFIRMATION._serialized_end=112
+  _TESTSERVICE._serialized_start=114
+  _TESTSERVICE._serialized_end=186
 # @@protoc_insertion_point(module_scope)

@@ -19,9 +19,9 @@ class TestServiceStub(object):
                 request_serializer=service__pb2.Null.SerializeToString,
                 response_deserializer=service__pb2.Null.FromString,
                 )
-        self.AddTicket = channel.unary_unary(
-                '/TestService/AddTicket',
-                request_serializer=service__pb2.Ticket.SerializeToString,
+        self.AddHoney = channel.unary_unary(
+                '/TestService/AddHoney',
+                request_serializer=service__pb2.Honey.SerializeToString,
                 response_deserializer=service__pb2.Confirmation.FromString,
                 )
 
@@ -35,7 +35,7 @@ class TestServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def AddTicket(self, request, context):
+    def AddHoney(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -49,9 +49,9 @@ def add_TestServiceServicer_to_server(servicer, server):
                     request_deserializer=service__pb2.Null.FromString,
                     response_serializer=service__pb2.Null.SerializeToString,
             ),
-            'AddTicket': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddTicket,
-                    request_deserializer=service__pb2.Ticket.FromString,
+            'AddHoney': grpc.unary_unary_rpc_method_handler(
+                    servicer.AddHoney,
+                    request_deserializer=service__pb2.Honey.FromString,
                     response_serializer=service__pb2.Confirmation.SerializeToString,
             ),
     }
@@ -82,7 +82,7 @@ class TestService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def AddTicket(request,
+    def AddHoney(request,
             target,
             options=(),
             channel_credentials=None,
@@ -92,8 +92,8 @@ class TestService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/TestService/AddTicket',
-            service__pb2.Ticket.SerializeToString,
+        return grpc.experimental.unary_unary(request, target, '/TestService/AddHoney',
+            service__pb2.Honey.SerializeToString,
             service__pb2.Confirmation.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

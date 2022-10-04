@@ -11,9 +11,9 @@ class Service(TestServiceServicer):
     def Health(self, request, context):
         return request
 
-    def AddTicket(self, request, context):
-        expected_dateline = datetime.utcnow() + timedelta(days=request.story_points)
-        return Confirmation(expected_dateline=expected_dateline.strftime("%Y-%m-%d %H:%M:%S"))
+    def AddHoney(self, request, context):
+        expected_dateline = datetime.utcnow()
+        return Confirmation(date=expected_dateline.strftime("%Y-%m-%d %H:%M:%S"))
 
 
 def execute_server():

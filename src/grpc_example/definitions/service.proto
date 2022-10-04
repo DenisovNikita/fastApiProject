@@ -2,17 +2,17 @@ syntax = "proto3";
 
 message Null {}
 
-message Ticket {
+message Honey {
   string name = 1;
   string description = 2;
-  uint32 story_points = 3;
+  uint32 price = 3;
 }
 
 message Confirmation {
-  string expected_dateline = 1;
+  string date = 1;
 }
 
 service TestService {
   rpc Health(Null) returns (Null);
-  rpc AddTicket(Ticket) returns (Confirmation);
+  rpc AddHoney(Honey) returns (Confirmation);
 }
