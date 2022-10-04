@@ -1,5 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import grpc
 
@@ -12,6 +12,7 @@ class Service(TestServiceServicer):
         return request
 
     def AddHoney(self, request, context):
+        print(f'AddHoney: request = {request}, context = {context}')
         expected_dateline = datetime.utcnow()
         return Confirmation(date=expected_dateline.strftime("%Y-%m-%d %H:%M:%S"))
 
