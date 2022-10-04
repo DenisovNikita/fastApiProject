@@ -3,3 +3,7 @@
 
 # pycache
 __pycache__/
+
+# venv
+src/grpc_example/.venv/
+
