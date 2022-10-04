@@ -1,4 +1,5 @@
 import grpc
+import re
 
 from grpc_example.definitions.builds.service_pb2 import Null, Honey
 from grpc_example.definitions.builds.service_pb2_grpc import TestServiceStub
@@ -14,4 +15,4 @@ def test_server():
             price=5000
         ))
 
-        print(confirmation.date)
+        assert re.match("%Y-%m-%d %H:%M:%S", confirmation.date)
