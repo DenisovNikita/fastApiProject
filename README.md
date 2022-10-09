@@ -64,3 +64,6 @@ Let`s compare these variants. Here what I find on the websites:
 
 #### Summary: PostgreSQL is a high-level database with open-source code and has a bunch of interesting features but can be slower than other databases and could be not supported by other open source apps.
 
+## My choice:
+
+In my web honey shop I will use redis. It is simple to set up and can be easily scaling. I will store there such data as my products. User info I won't support at the beginning, so redis will be perfect match.
