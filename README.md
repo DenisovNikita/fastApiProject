@@ -20,7 +20,7 @@ run `python -m pytest` in the root of project
 
 Let`s compare these variants. Here what I find on the websites:
 
-#### 1. Pros of Redis:
+1. #### Pros of Redis:
 - It’s super fast. Faster than any other cashing out there.
 - Due to easy setup, Redis is Simple and easy to use.
 - Redis has flexible data structures, it supports almost all data structures.
@@ -37,5 +37,16 @@ Let`s compare these variants. Here what I find on the websites:
 
 #### Summary: Redis is easy to use, fast and have all needed data structures but can skip some messages and require huge RAM memory on a servers.
 
-4. Lite, good for web-application
+2. #### Pros of SQLite
+- SQLite doesn’t require a server to run.
+- SQLite is a lightweight, simple option. It doesn’t require a lot of database admin, and it’s also light on required resources.
+- SQLite is (usually) faster than a server-based counterpart or a file-based system. This is because it only loads needed data, rather than entire files.
+
+#### Cons of SQLite
+- No network access. It doesn’t allow for remote work on another PC, for instance.
+- It’s not suitable for large scale apps
+- It has a limited database size
+
+#### Summary: SQLite easy to use and setting but it has no network access and have a limited size which bring us to replace this database to another later.
+
 3. Great SQL dialect
