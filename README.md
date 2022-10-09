@@ -11,3 +11,15 @@ Technologies:
 ### Tests
 
 run `python -m pytest` in the root of project
+
+### Databases
+
+- Redis
+- SQLite
+- PostreSQL
+
+Let`s compare these variants
+
+1. Redis in-memory <key, value> storage
+2. Lite, good for web-application
+3. Great SQL dialect
