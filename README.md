@@ -49,4 +49,18 @@ Let`s compare these variants. Here what I find on the websites:
 
 #### Summary: SQLite easy to use and setting but it has no network access and have a limited size which bring us to replace this database to another later.
 
-3. Great SQL dialect
+3. #### Pros of PostgreSQL
+- Can run dynamic websites and web apps as a LAMP stack option.
+- PostgreSQL’s write-ahead logging makes it a highly fault-tolerant database.
+- Source code is freely available under an open source license. This allows you the freedom to use, modify, and implement it as per your business needs.
+- PostgreSQL supports geographic objects so you can use it for location-based services and geographic information systems.
+- Low maintenance and administration for both embedded and enterprise use of PostgreSQL.
+
+#### Cons of PostgreSQL
+- Postgres is not owned by one organization. So, it has had trouble getting its name out there despite being fully featured and comparable to other DBMS systems
+- Changes made for speed improvement requires more work than MySQL as PostgreSQL focuses on compatibility
+- Many open source apps support MySQL, but may not support PostgreSQL
+- On performance metrics, it is slower than MySQL.
+
+#### Summary: PostgreSQL is a high-level database with open-source code and has a bunch of interesting features but can be slower than other databases and could be not supported by other open source apps.
+
